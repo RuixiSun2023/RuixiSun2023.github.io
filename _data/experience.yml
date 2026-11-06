@@ -1,0 +1,48 @@
+- title: Research & Education
+  id: research-education
+  entries:
+    - role: Research Assistant
+      start: 2026-07
+      period: Jul 2026 – Present
+- title: Teaching
+  id: teaching
+  entries:
+    - role: Teaching Assistant
+      subject: Graduate English
+      organization: ShanghaiTech University
+      start: 2025-02
+      end: 2026-06
+      period: Feb 2025 – Jun 2026
+      description: Answered students’ questions and graded assignments.
+    - role: Teaching Assistant
+      subject: Academic Writing
+      organization: ShanghaiTech University
+      start: 2024-09
+      end: 2025-01
+      period: Sep 2024 – Jan 2025
+      description: Answered students’ questions and graded assignments.
+    - role: Teaching Assistant
+      subject: Digital Signal Processing (DSP)
+      organization: ShanghaiTech University
+      start: 2024-02
+      end: 2024-06
+      period: Feb – Jun 2024
+      description: Led problem-solving sessions, set homework, and graded assignments.
+  subtitle: Teaching Assistant · ShanghaiTech University
+- title: Service & Leadership
+  id: service-leadership
+  entries:
+    - role: Assistant Server Administrator
+      organization: ShanghaiTech University
+      start: 2024-09
+      end: 2025-08
+      period: Sep 2024 – Aug 2025
+      description: Maintained the server cluster and supported its use.
+    - role: Vision Team Lead
+      subject: RoboMaster Team
+      organization: North University of China
+      start: "2020"
+      end: "2023"
+      period: 2020–2023
+      description: Led the vision group, working on Kalman-filter-based prediction and
+        image recognition, and trained new team members.

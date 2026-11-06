@@ -1,0 +1,250 @@
+/* Shared visual language, based on the personal photo journal. */
+:root {
+  --site-serif: "Times New Roman", Times, serif;
+  --site-sans: Arial, Helvetica, sans-serif;
+  --site-accent: #b52b29;
+  --site-muted: #666;
+  --site-rule: #d5d5d5;
+  --global-theme-color: var(--site-accent);
+  --global-hover-color: var(--site-accent);
+  --global-text-color-light: var(--site-muted);
+  --global-divider-color: var(--site-rule);
+}
+html[data-theme="dark"] {
+  --site-accent: #ef8a83;
+  --site-muted: #aaa;
+  --site-rule: #484848;
+  --global-theme-color: var(--site-accent);
+  --global-hover-color: var(--site-accent);
+  --global-text-color-light: var(--site-muted);
+  --global-divider-color: var(--site-rule);
+}
+body.site-editorial {
+  font-family: var(--site-sans);
+  font-weight: 400;
+  line-height: 1.7;
+  padding-top: 72px;
+  padding-bottom: 0;
+}
+.site-editorial > .container[role="main"],
+.site-editorial #navbar > .container,
+.site-editorial footer > .container {
+  width: 100%;
+  max-width: 1160px;
+  padding-inline: 40px;
+}
+.site-editorial > .container[role="main"] {
+  margin-top: 48px !important;
+  padding-bottom: 24px;
+}
+.site-editorial #navbar {
+  min-height: 72px;
+  padding-inline: 0;
+  background: var(--global-bg-color);
+  border-bottom: 1px solid var(--site-rule);
+  box-shadow: none;
+}
+.site-editorial #navbar .navbar-brand {
+  font-family: var(--site-serif);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+.site-editorial #navbar .nav-link {
+  font-family: var(--site-sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+.site-editorial #navbar .nav-item.active > .nav-link {
+  color: var(--site-accent);
+}
+.site-editorial .post-header,
+.site-editorial .experience-header,
+.site-editorial .journal-header {
+  margin: 0 0 56px;
+}
+.site-editorial [role="main"] h1 {
+  margin: 0;
+  font-family: var(--site-serif);
+  font-size: clamp(48px, 7.2vw, 96px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+.site-eyebrow,
+.journal-eyebrow,
+.site-editorial .post-header::before {
+  display: block;
+  margin: 0 0 24px;
+  color: var(--site-accent);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.site-editorial .post-header::before {
+  content: "Ruixi Sun";
+}
+.site-editorial[data-page="/"] .post-header::before {
+  content: "About me";
+}
+.site-editorial[data-page="/publications/"] .post-header::before {
+  content: "Papers & collaborations";
+}
+.site-editorial[data-page="/cv/"] .post-header::before {
+  content: "Curriculum vitae";
+}
+.site-editorial .post-header > p:last-child,
+.experience-intro,
+.journal-intro {
+  margin: 28px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--global-text-color);
+  color: var(--site-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.site-editorial [role="main"] a:focus-visible,
+.site-editorial #navbar a:focus-visible,
+.site-editorial button:focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 4px;
+}
+.site-editorial .social {
+  margin-top: 28px;
+  text-align: left;
+}
+.site-editorial .social .contact-icons {
+  font-size: 24px;
+}
+.site-editorial #bibsearch {
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid var(--site-rule);
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  padding: 12px 14px;
+  font-family: var(--site-sans);
+  font-size: 14px;
+}
+.site-editorial #bibsearch:focus {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 2px;
+}
+.site-editorial .publications h2.bibliography {
+  margin: 48px 0 28px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--site-rule);
+  border-bottom: 0;
+  color: var(--global-text-color);
+  text-align: left;
+  font-family: var(--site-sans);
+  font-size: 20px;
+  font-weight: 400;
+}
+.site-editorial .publications ol.bibliography {
+  padding: 0;
+}
+.site-editorial .publications ol.bibliography > li {
+  margin: 0 0 36px;
+}
+.site-editorial .publications ol.bibliography > li > .row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 32px;
+  margin: 0;
+}
+.site-editorial .publications ol.bibliography > li > .row > div {
+  width: auto;
+  max-width: none;
+  padding: 0;
+}
+.site-editorial .publications ol.bibliography .abbr abbr {
+  display: inline-block;
+  width: auto !important;
+  margin: 3px 0 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  /* The theme marks badge text color important; replace it for text-only labels. */
+  color: var(--site-accent) !important;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  text-align: left;
+  white-space: normal;
+}
+.site-editorial .publications ol.bibliography .abbr abbr a {
+  color: inherit;
+}
+.site-editorial .publications ol.bibliography .title {
+  margin-bottom: 12px;
+  font-family: var(--site-serif);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.site-editorial .publications .author,
+.site-editorial .publications .periodical {
+  color: var(--site-muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+.site-editorial .publications .links {
+  margin-top: 12px;
+}
+.site-editorial .publications .links a.btn {
+  margin: 0 8px 6px 0;
+  padding: 6px 12px;
+  border: 1px solid var(--site-rule);
+  border-radius: 0;
+  color: var(--global-text-color);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.site-editorial .publications .links a.btn:hover {
+  border-color: var(--site-accent);
+  background: transparent;
+  color: var(--site-accent);
+}
+.site-editorial footer.sticky-bottom {
+  position: static;
+  margin-top: 64px !important;
+  padding: 24px 0;
+  border-top: 1px solid var(--site-rule);
+  background: var(--global-bg-color);
+  color: var(--site-muted);
+  font-size: 11px;
+}
+.site-editorial footer a {
+  color: inherit;
+}
+@media (max-width: 700px) {
+  .site-editorial > .container[role="main"],
+  .site-editorial #navbar > .container,
+  .site-editorial footer > .container {
+    padding-inline: 22px;
+  }
+  .site-editorial > .container[role="main"] {
+    margin-top: 36px !important;
+  }
+  .site-editorial .post-header,
+  .site-editorial .experience-header,
+  .site-editorial .journal-header {
+    margin-bottom: 36px;
+  }
+  .site-editorial .publications ol.bibliography > li > .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .site-editorial .publications ol.bibliography .title {
+    font-size: 25px;
+  }
+}

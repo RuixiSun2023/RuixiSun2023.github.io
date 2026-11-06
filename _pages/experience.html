@@ -1,0 +1,56 @@
+---
+layout: default
+permalink: /experience/
+title: Experience
+description: Research, education, teaching, and service.
+nav: true
+nav_order: 2
+stylesheet: /assets/css/experience.css
+---
+
+<article class="experience-page">
+  <header class="experience-header">
+    <p class="site-eyebrow">Background &amp; contributions</p>
+    <h1>Experience</h1>
+    <p class="experience-intro">Research, education, teaching, and service.</p>
+  </header>
+
+  {% for section in site.data.experience %}
+  <section class="experience-section" aria-labelledby="{{ section.id }}">
+    <h2 id="{{ section.id }}">{{ section.title }}</h2>
+    {% if section.subtitle %}
+    <p class="experience-section-note">{{ section.subtitle }}</p>
+    {% endif %} {% for entry in section.entries %}
+    <div class="experience-entry">
+      <p class="experience-date">{{ entry.period }}</p>
+      <div class="experience-detail">
+        {% if section.id == 'teaching' %}
+        <h3>{{ entry.subject }}</h3>
+        {% else %}
+        <h3>{{ entry.role }}{% if entry.subject %}<span class="experience-subject"> · {{ entry.subject }}</span>{% endif %}</h3>
+        {% if entry.organization %}
+        <p class="experience-organization">{{ entry.organization }}</p>
+        {% endif %} {% endif %} {% if entry.description %}
+        <p class="experience-description">{{ entry.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %} {% if section.id == 'research-education' %} {% for education in site.data.cv.cv.sections.Education %}
+    <div class="experience-entry">
+      <p class="experience-date">
+        <time datetime="{{ education.start_date }}">{{ education.start_date | slice: 0, 4 }}</time>–<time datetime="{{ education.end_date }}"
+          >{{ education.end_date | slice: 0, 4 }}</time
+        >
+      </p>
+      <div class="experience-detail">
+        <h3>{{ education.studyType }}</h3>
+        <p class="experience-organization">{{ education.institution }}</p>
+        {% if education.institution == 'ShanghaiTech University' %}
+        <p class="experience-description">Advisors: Prof. Fei Gao and Prof. Xiran Cai.</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %} {% endif %}
+  </section>
+  {% endfor %}
+</article>

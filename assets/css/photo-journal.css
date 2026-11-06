@@ -1,0 +1,219 @@
+/* Photo-specific layouts; shared headings, colors, and shell live in site-editorial.css. */
+.journal-photo time,
+.journal-section-heading > span,
+.journal-end {
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.journal-eyebrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--site-accent);
+}
+.journal-eyebrow > span {
+  color: var(--site-muted);
+}
+.journal-intro {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 24px;
+}
+.journal-intro > p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--site-muted);
+}
+.journal-years {
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+}
+.photo-journal a {
+  color: inherit;
+}
+.journal-years a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.photo-journal a:hover {
+  color: var(--site-accent);
+}
+.photo-journal a:focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 6px;
+}
+.journal-section {
+  margin-bottom: 80px;
+}
+.journal-section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--site-rule);
+}
+.journal-section-heading h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  scroll-margin-top: 100px;
+}
+.journal-section-heading > span {
+  color: var(--site-muted);
+}
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 52px 36px;
+}
+.journal-photo {
+  min-width: 0;
+  margin: 0;
+}
+.journal-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: zoom-in;
+}
+.journal-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+.journal-enlarge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 12px;
+  background: #151515;
+  color: #fff;
+  font-size: 11px;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+.journal-image:hover .journal-enlarge,
+.journal-image:focus-visible .journal-enlarge {
+  opacity: 1;
+}
+.journal-photo figcaption {
+  padding-top: 22px;
+}
+.journal-photo time {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--site-muted);
+}
+.journal-photo h3 {
+  font-family: var(--site-serif);
+  font-weight: 400;
+  margin: 0 0 12px;
+  font-size: clamp(27px, 2.5vw, 34px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.journal-photo figcaption > p {
+  max-width: 48ch;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--site-muted);
+}
+.journal-photo--portrait,
+.journal-photo--feature,
+.journal-photo--landscape {
+  grid-column: 1 / -1;
+}
+.journal-photo--portrait,
+.journal-photo--feature {
+  display: grid;
+  align-items: center;
+  gap: 56px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.journal-photo--portrait .journal-image {
+  max-width: 440px;
+}
+.journal-photo--portrait figcaption,
+.journal-photo--feature figcaption {
+  padding-block: 24px;
+}
+.journal-photo--portrait h3 {
+  max-width: 12ch;
+  font-size: clamp(36px, 4vw, 52px);
+}
+.journal-photo--feature {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+}
+.journal-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--site-rule);
+  padding-top: 20px;
+  color: var(--site-muted);
+}
+.journal-end a {
+  padding-block: 12px;
+}
+@media (max-width: 700px) {
+  .journal-intro {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .journal-years {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .journal-section {
+    margin-bottom: 52px;
+  }
+  .journal-section-heading {
+    gap: 16px;
+  }
+  .journal-section-heading > span {
+    font-size: 10px;
+    letter-spacing: 0.06em;
+  }
+  .journal-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+  }
+  .journal-photo--portrait,
+  .journal-photo--feature {
+    display: block;
+  }
+  .journal-photo--portrait .journal-image {
+    max-width: none;
+  }
+  .journal-photo figcaption {
+    padding: 18px 0 0;
+  }
+  .journal-photo--portrait h3 {
+    max-width: none;
+    font-size: 34px;
+  }
+}
+@media (max-width: 380px) {
+  .journal-eyebrow > span {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journal-enlarge {
+    transition: none;
+  }
+}

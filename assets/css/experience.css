@@ -1,0 +1,67 @@
+/* Experience-specific layout; typography and page shell come from site-editorial.css. */
+.experience-section {
+  margin-bottom: 48px;
+}
+.experience-section h2 {
+  margin: 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--site-rule);
+  font-family: var(--site-sans);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.experience-section-note {
+  margin: 14px 0 0;
+  color: var(--site-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.experience-entry {
+  display: grid;
+  grid-template-columns: 172px minmax(0, 1fr);
+  gap: 32px;
+  padding-top: 28px;
+}
+.experience-date {
+  margin: 0;
+  padding-top: 4px;
+  color: var(--site-muted);
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+.experience-detail h3 {
+  margin: 0;
+  font-family: var(--site-serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.experience-subject {
+  font-weight: 400;
+}
+.experience-organization {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.experience-description {
+  max-width: 72ch;
+  margin: 8px 0 0;
+  color: var(--site-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+@media (max-width: 700px) {
+  .experience-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .experience-detail h3 {
+    font-size: 26px;
+  }
+}

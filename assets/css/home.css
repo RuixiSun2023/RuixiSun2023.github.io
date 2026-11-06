@@ -1,0 +1,124 @@
+/* Homepage composition, using the shared editorial fonts and colors. */
+.home-introduction {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 64px;
+}
+.home-copy p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.home-copy .home-lead {
+  font-size: 19px;
+  line-height: 1.7;
+}
+.home-copy .home-links {
+  margin: 28px 0 0;
+  font-size: 14px;
+}
+.home-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-bottom: 1px solid var(--site-accent);
+}
+.home-portrait,
+.home-portrait figure {
+  margin: 0;
+}
+.home-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+.home-research,
+.home-publications {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--site-rule);
+}
+.home-page h2 {
+  margin: 0 0 20px;
+  font-family: var(--site-serif);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+.home-section-intro {
+  max-width: 70ch;
+  margin: 0 0 30px;
+  color: var(--site-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.home-research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+.home-research-item h3 {
+  min-height: 2.5em;
+  margin: 0 0 14px;
+  font-family: var(--site-serif);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.home-research-item p {
+  margin: 0;
+  color: var(--site-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+.home-section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 28px;
+}
+.home-section-heading h2 {
+  margin: 0;
+}
+.home-section-heading > a {
+  font-size: 13px;
+}
+@media (max-width: 900px) {
+  .home-introduction {
+    gap: 32px;
+  }
+  .home-research-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+  .home-research-item h3 {
+    min-height: 0;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .home-introduction {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .home-portrait {
+    max-width: 440px;
+  }
+  .home-copy .home-lead {
+    font-size: 18px;
+  }
+  .home-research,
+  .home-publications {
+    margin-top: 44px;
+  }
+  .home-page h2 {
+    font-size: 32px;
+  }
+}

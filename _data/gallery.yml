@@ -1,0 +1,93 @@
+- year: 2023
+  chapter: The beginning
+  photos:
+    - title: Our First Lab Dinner
+      date: September 2023
+      datetime: 2023-09
+      path: /assets/img/gallery/lab-dinner-2023.jpg
+      width: 960
+      height: 1280
+      alt: Our first lab dinner
+      story: My first dinner with the senior students in our lab.
+      layout: portrait
+- year: 2024
+  chapter: Together, in and out of the lab
+  photos:
+    - title: Testing Our New System
+      date: May 2024
+      datetime: 2024-05
+      path: /assets/img/gallery/lab-testing-2024.jpg
+      width: 1280
+      height: 959
+      alt: Labmates testing a new system
+      story: Everyone was working together to test our brand-new system! Such an exciting
+        moment for the whole team!
+    - title: Teachers’ Day Celebration
+      date: October 2024
+      datetime: 2024-10
+      path: /assets/img/gallery/teachers-day-2024.jpg
+      width: 1280
+      height: 960
+      alt: Teachers' Day celebration
+      story: Celebrating Teachers’ Day with our professors and labmates.
+    - title: A Trip to Finland (Sort of)
+      date: October 2024
+      datetime: 2024-10
+      path: /assets/img/gallery/finland-2024.jpg
+      width: 1280
+      height: 959
+      alt: Labmates on a trip to Finland holding a photo of Ruixi Sun
+      story: My labmates went to Finland and brought a photo of me along! 😂
+      layout: feature
+- year: 2025
+  chapter: A little further afield
+  photos:
+    - title: Lab Trip to Xinjiang
+      date: June 2025
+      datetime: 2025-06
+      path: /assets/img/gallery/xinjiang-2025.jpg
+      width: 1280
+      height: 720
+      alt: Lab trip to Xinjiang
+      story: Exploring Xinjiang with my labmates!
+      layout: landscape
+    - title: Farewell to Our Graduating Labmates!
+      date: July 2025
+      datetime: 2025-07
+      path: /assets/img/gallery/farewell-2025.jpg
+      width: 1280
+      height: 960
+      alt: Farewell to our graduating labmates
+      story: Our senior labmates graduated! So many great memories together. I’ll
+        miss you guys! 😭
+      layout: feature
+- year: 2026
+  chapter: An unforgettable chapter
+  photos:
+    - title: Thesis Defense Completed
+      date: May 2026
+      datetime: 2026-05
+      path: /assets/img/gallery/thesis-defense-2026.jpg
+      width: 1280
+      height: 1039
+      alt: Thesis defense completed
+      story: Finally defended my master’s thesis! All the hard work paid off!
+    - title: Lab Trip to Sichuan
+      date: June 2026
+      datetime: 2026-06
+      path: /assets/img/gallery/sichuan-2026.jpg
+      width: 1280
+      height: 960
+      alt: Lab trip to Sichuan
+      story: Another wonderful trip with my labmates! We also went hiking in the snowy
+        mountains, but I ended up getting altitude sickness. 😟
+    - title: Graduated from ShanghaiTech
+      date: July 2026
+      datetime: 2026-07
+      path: /assets/img/gallery/graduation-2026.jpg
+      width: 853
+      height: 1280
+      alt: Graduation from ShanghaiTech University
+      story: Officially graduated from ShanghaiTech University! The end of an unforgettable
+        chapter and the beginning of a new adventure!
+      layout: portrait
