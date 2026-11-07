@@ -1,0 +1,33 @@
+---
+layout: page
+permalink: /homies/
+title: Homies
+description: Friends and their homepages.
+nav: true
+nav_order: 4
+stylesheet: /assets/css/homies.css
+friends:
+  - name: Youshen Xiao
+    portrait: youshen-xiao.webp
+    url: https://zhaowumian7.github.io/
+  - name: Shangqing Tong
+    portrait: shangqing-tong.webp
+    url: https://noeltong.github.io/
+  - name: Yunhui Jiang
+    portrait: yunhui-jiang.webp
+    url: https://yunhui-jiang.github.io/
+  - name: Yuwei Zheng
+    portrait: yuwei-zheng.webp
+    url: https://zhengyuwei123.github.io/
+---
+
+<ul class="homies-list" role="list">
+  {% for friend in page.friends %}
+  <li>
+    <a href="{{ friend.url }}">
+      <img src="{{ friend.portrait | prepend: '/assets/img/homies/' | relative_url }}" alt="" width="400" height="500" decoding="async" />
+      <span class="homies-name">{{ friend.name | escape }} <span aria-hidden="true">↗</span></span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

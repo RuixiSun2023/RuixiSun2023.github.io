@@ -2,6 +2,8 @@
   id: research-education
   entries:
     - role: Research Assistant
+      organization: ShanghaiTech University
+      description: "Advisor: Prof. Xiran Cai."
       start: 2026-07
       period: Jul 2026 – Present
 - title: Teaching

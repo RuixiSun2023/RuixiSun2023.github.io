@@ -1,0 +1,41 @@
+.homies-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.homies-list a {
+  display: block;
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+.homies-list img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+}
+.homies-name {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px;
+  margin-top: 12px;
+  font: 400 clamp(22px, 2.2vw, 32px)/1.15 var(--site-serif);
+  letter-spacing: -0.025em;
+}
+.homies-name span {
+  color: var(--site-accent);
+  font: 14px/1 var(--site-sans);
+}
+.homies-list a:is(:hover, :focus-visible) .homies-name {
+  color: var(--site-accent);
+}
+@media (max-width: 800px) {
+  .homies-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 16px;
+  }
+}
