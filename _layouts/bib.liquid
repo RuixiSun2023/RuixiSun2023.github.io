@@ -186,11 +186,13 @@
         >
         </i>
       {% endif %}
+      {% if cofirst_count > 0 %}
+        <details class="cofirst-info">
+          <summary aria-label="Co-first authorship information"><span aria-hidden="true">!</span></summary>
+          <p class="cofirst-credit">† Co-first authors (equal contribution)</p>
+        </details>
+      {% endif %}
     </div>
-
-    {% if cofirst_count > 0 %}
-      <p class="cofirst-credit">† Co-first authors (equal contribution)</p>
-    {% endif %}
 
     <!-- Journal/Book title and date -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}

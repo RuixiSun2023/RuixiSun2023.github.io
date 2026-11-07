@@ -230,12 +230,42 @@ body.site-editorial {
   line-height: 1.75;
 }
 .site-editorial .cofirst-symbol,
-.site-editorial .cofirst-credit {
+.site-editorial .cofirst-info summary {
   color: var(--site-accent);
 }
-.site-editorial .cofirst-credit {
-  margin: 3px 0;
-  font: 600 13px/1.45 var(--site-sans);
+.cofirst-info {
+  display: inline;
+}
+.cofirst-info summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  list-style: none;
+  cursor: pointer;
+}
+.cofirst-info summary::-webkit-details-marker {
+  display: none;
+}
+.cofirst-info summary span {
+  width: 15px;
+  height: 15px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  text-align: center;
+  font: 600 11px/13px var(--site-sans);
+}
+.cofirst-info summary:focus-visible {
+  outline: 2px solid var(--site-accent);
+}
+.cofirst-info .cofirst-credit {
+  margin: 4px 0 6px;
+  padding-left: 8px;
+  border-left: 2px solid var(--site-accent);
+  color: var(--global-text-color);
+  font: 13px/1.45 var(--site-sans);
 }
 .site-editorial .publications .links {
   margin-top: 12px;
