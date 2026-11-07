@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /homies/
 title: Homies
 description: Friends and their homepages.
@@ -21,13 +21,23 @@ friends:
     url: https://zhengyuwei123.github.io/
 ---
 
-<ul class="homies-list" role="list">
-  {% for friend in page.friends %}
-  <li>
-    <a href="{{ friend.url }}">
-      <img src="{{ friend.portrait | prepend: '/assets/img/homies/' | relative_url }}" alt="" width="400" height="500" decoding="async" />
-      <span class="homies-name">{{ friend.name | escape }} <span aria-hidden="true">↗</span></span>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+<article class="homies-page">
+  <header class="homies-header">
+    <p class="site-eyebrow">Friends &amp; homepages</p>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <ul class="homies-list" role="list">
+    {% for friend in page.friends %}
+    <li>
+      <a href="{{ friend.url }}">
+        <img src="{{ friend.portrait | prepend: '/assets/img/homies/' | relative_url }}" alt="" width="96" height="96" decoding="async" />
+        <span class="homies-person">
+          <span class="homies-name">{{ friend.name | escape }}</span>
+          <span class="homies-domain">{{ friend.url | remove: 'https://' | remove: '/' }}</span>
+        </span>
+        <span class="homies-arrow" aria-hidden="true">↗</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</article>

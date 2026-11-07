@@ -365,6 +365,7 @@ filtered_bibtex_keywords:
     additional_info,
     altmetric,
     annotation,
+    cofirst,
     arxiv,
     award,
     award_name,

@@ -229,6 +229,14 @@ body.site-editorial {
   font-size: 14px;
   line-height: 1.75;
 }
+.site-editorial .cofirst-symbol,
+.site-editorial .cofirst-credit {
+  color: var(--site-accent);
+}
+.site-editorial .cofirst-credit {
+  margin: 3px 0;
+  font: 600 13px/1.45 var(--site-sans);
+}
 .site-editorial .publications .links {
   margin-top: 12px;
 }

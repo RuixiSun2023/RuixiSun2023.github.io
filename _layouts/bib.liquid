@@ -88,10 +88,11 @@
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
+      {% assign cofirst_count = entry.cofirst | default: 0 | plus: 0 | at_most: author_array_size %}
 
       {% assign author_array_limit = author_array_size %}
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
-        {% assign author_array_limit = site.max_author_limit %}
+        {% assign author_array_limit = site.max_author_limit | at_least: cofirst_count %}
       {% endif %}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
@@ -135,6 +136,9 @@
             {{- author.first }}
             {{ author_last_html -}}
           {% endif %}
+        {%- endif -%}
+        {%- if forloop.index <= cofirst_count -%}
+          <sup class="cofirst-symbol">†</sup>
         {%- endif -%}
       {% endfor %}
       {%- assign more_authors = author_array_size | minus: author_array_limit -%}
@@ -183,6 +187,10 @@
         </i>
       {% endif %}
     </div>
+
+    {% if cofirst_count > 0 %}
+      <p class="cofirst-credit">† Co-first authors (equal contribution)</p>
+    {% endif %}
 
     <!-- Journal/Book title and date -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
