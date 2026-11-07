@@ -8,6 +8,7 @@ Built with Jekyll and al-folio. Push changes to `main` to publish through GitHub
 
 - Introduction and research interests: `_pages/about.md`
 - Publications and PDF links: `_bibliography/papers.bib`
+- Publication previews: `assets/img/publication_preview/`; source figure numbers, PDF page numbers and descriptions: `_data/publication_figures.yml`
 - Full-text papers: `assets/pdf/` (11 papers)
 - Experience: `_data/experience.yml`; education: `_data/cv.yml`
 - Photo journal: `_data/gallery.yml` and `assets/img/gallery/`

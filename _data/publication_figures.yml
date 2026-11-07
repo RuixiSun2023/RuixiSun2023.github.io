@@ -1,0 +1,66 @@
+sun2026structured:
+  page: 3
+  figure: Fig. 2e, h
+  alt: Zebrafish photoacoustic reconstructions before and after sequential denoising.
+  width: 680
+  height: 380
+luo2025margin:
+  page: 2
+  figure: Fig. 1
+  alt: Clinical workflow for managing positive margins in breast-conserving surgery.
+  width: 887
+  height: 720
+xiao2026absorption:
+  page: 3
+  figure: Fig. 3
+  alt: "Phantom absorption maps: the PAT input and the ABCER reconstruction."
+  width: 680
+  height: 380
+xiao2025resolution:
+  page: 9
+  figure: Fig. 10
+  alt: "Mouse-ear vessels at twofold undersampling: the AR-PAM input and the enhanced reconstruction."
+  width: 680
+  height: 380
+jiang2025window:
+  page: 2
+  figure: Fig. 1a
+  alt: Laser illumination and the ultrasound transmission field at the opto-acoustic window.
+  width: 515
+  height: 326
+zheng2025hardware:
+  page: 5
+  figure: Fig. 4
+  alt: The FPGA architecture for iterative reconstruction, including the DAS, deviation and loss modules.
+  width: 819
+  height: 720
+sun2025transcranial:
+  page: 5
+  figure: Fig. 4
+  alt: A photoacoustic cerebral artery registered to MRI, with the matched vessel enlarged.
+  width: 908
+  height: 586
+xiao2025temporal:
+  page: 8
+  figure: Fig. 6b
+  alt: An abdominal PACT time sequence comparing reference frames, continuously upsampled frames and error maps.
+  width: 960
+  height: 547
+sun2024emi:
+  page: 2
+  figure: Fig. 3
+  alt: Simulated and experimental reconstructions before and after adaptive EMI filtering, with enlarged finger-image details.
+  width: 769
+  height: 475
+zheng2024smartdaq:
+  page: 2
+  figure: Fig. 1a
+  alt: The SmartDAQ acquisition unit with its external connectors and carrying handle.
+  width: 380
+  height: 299
+zhang2024phantom:
+  page: 2
+  figure: Fig. 2
+  alt: Plan view of the numerical brain phantom with eight illumination beams arranged around it.
+  width: 728
+  height: 720
