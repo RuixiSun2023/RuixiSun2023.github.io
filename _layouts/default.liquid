@@ -30,6 +30,12 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
+    {% if site.enable_darkmode %}
+      <script>
+        // The theme resolves the OS preference on first visit. Toggle from that visible color.
+        toggleThemeSetting = () => setThemeSetting(determineComputedTheme() === 'dark' ? 'light' : 'dark');
+      </script>
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/site-editorial.css' | relative_url | bust_file_cache }}">
     {% if page.stylesheet %}
       <link rel="stylesheet" href="{{ page.stylesheet | relative_url | bust_file_cache }}">

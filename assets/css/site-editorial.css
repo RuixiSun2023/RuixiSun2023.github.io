@@ -56,6 +56,15 @@ body.site-editorial {
   font-weight: 400;
   letter-spacing: 0.06em;
 }
+#light-toggle .theme-to-dark,
+html[data-theme="dark"] #light-toggle .theme-to-light {
+  display: inline-flex;
+  vertical-align: middle;
+}
+#light-toggle .theme-to-light,
+html[data-theme="dark"] #light-toggle .theme-to-dark {
+  display: none;
+}
 .site-editorial #navbar .nav-item.active > .nav-link {
   color: var(--site-accent);
 }
